@@ -1,7 +1,7 @@
 import { interval, Observable, Observer, fromEvent } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-export class ItemDataService {
+export class StreamSolutionService {
 
   items: string[] = [];
 
