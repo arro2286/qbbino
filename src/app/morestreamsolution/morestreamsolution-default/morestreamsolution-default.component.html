@@ -1,0 +1,13 @@
+<div class="solution">
+  <h3>More Stream solution (Default)</h3>
+  <h5>Solution with streams in the service and in the component</h5>
+  <form [formGroup]="itemForm" (ngSubmit)="submit()" #form>
+    <input type="text" formControlName="itemText" />
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let item of items$ | async">{{ item }}</li>
+  </ul>
+  <p>Not working correctly!</p>
+</div>

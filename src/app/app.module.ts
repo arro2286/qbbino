@@ -9,11 +9,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ArraySolutionContainerComponent } from './arraysolution/arraysolution-container.component';
 import { StreamSolutionContainerComponent } from './streamsolution/streamsolution-container.component';
 import { StreamsolutionModule } from './streamsolution/streamsolution.module';
+import { MoreStreamsolutionModule } from './morestreamsolution/morestreamsolution.module';
+import { MoreStreamSolutionContainerComponent } from './morestreamsolution/morestreamsolution-container.component';
 
 
 const appRoutes: Routes = [
   { path: 'arraysolution', component: ArraySolutionContainerComponent },
   { path: 'streamsolution', component: StreamSolutionContainerComponent },
+  { path: 'morestreamsolution', component: MoreStreamSolutionContainerComponent },
 ];
 
 @NgModule({
@@ -21,6 +24,7 @@ const appRoutes: Routes = [
                   ReactiveFormsModule,
                   ArraysolutionModule,
                   StreamsolutionModule,
+                  MoreStreamsolutionModule,
                   RouterModule.forRoot(
                     appRoutes) ],
   declarations: [ AppComponent ],
