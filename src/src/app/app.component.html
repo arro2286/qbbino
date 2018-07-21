@@ -1,0 +1,8 @@
+<form [formGroup]="itemForm" ngSubmit #form>
+  <input type="text" formControlName="itemText"/>
+  <button type="submit">Add</button>
+</form>
+
+<ul>
+  <li *ngFor="let item of items$ | async">{{ item }}</li>
+</ul>
