@@ -3,14 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-
-import { ItemDataService } from './item-data.service';
+import { ArraysolutionModule } from './arraysolution/arraysolution.module';
 
 @NgModule({
-  imports:      [ BrowserModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  imports:      [ BrowserModule, ReactiveFormsModule, ArraysolutionModule ],
+  declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ],
-  providers:    [ ItemDataService ]
 })
-export class AppModule { }
+export class AppModule {
+
+}
