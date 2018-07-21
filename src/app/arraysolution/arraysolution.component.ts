@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ArrayDataService } from '../arraydata.service';
+import { ArrayDataService } from './arraydata.service';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-arraymain',
-  templateUrl: './array-main.component.html',
-  styleUrls: ['./array-main.component.css']
+  selector: 'app-arraysolution',
+  templateUrl: './arraysolution.component.html',
+  styleUrls: ['./arraysolution.component.css']
 })
-export class ArrayMainComponent implements OnInit {
+export class ArraySolutionComponent implements OnInit {
 
   itemForm = new FormGroup({
     itemText: new FormControl(''),

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArrayMainComponent } from './main/array-main.component';
+import { ArraySolutionComponent } from './arraysolution.component';
 import { ArrayDataService } from './arraydata.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -9,8 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ReactiveFormsModule
   ],
-  declarations: [ ArrayMainComponent ],
+  declarations: [ ArraySolutionComponent ],
   providers:    [ ArrayDataService ],
-  exports: [ ArrayMainComponent ]
+  exports: [ ArraySolutionComponent ]
 })
 export class ArraysolutionModule { }
