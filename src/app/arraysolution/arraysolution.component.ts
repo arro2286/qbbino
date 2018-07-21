@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArrayDataService } from './arraydata.service';
+import { ArraySolutionService } from './arraysolution.service';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -13,7 +13,7 @@ export class ArraySolutionComponent implements OnInit {
     itemText: new FormControl(''),
   });
 
-  constructor(public arrayDataService: ArrayDataService) {
+  constructor(public arraySolutionService: ArraySolutionService) {
 
   }
 
@@ -21,6 +21,6 @@ export class ArraySolutionComponent implements OnInit {
   }
 
   submit() {
-    this.arrayDataService.addItem(this.itemForm.value.itemText)
+    this.arraySolutionService.addItem(this.itemForm.value.itemText)
   }
 }

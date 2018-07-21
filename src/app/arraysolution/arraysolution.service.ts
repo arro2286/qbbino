@@ -1,4 +1,4 @@
-export class ArrayDataService {
+export class ArraySolutionService {
 
   items: string[] = [];
 
