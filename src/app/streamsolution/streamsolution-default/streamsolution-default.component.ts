@@ -2,6 +2,8 @@ import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@
 
 import { FormGroup, FormControl } from '@angular/forms';
 import { StreamSolutionService } from '../streamsolution.service';
+import { switchMap } from 'rxjs/operators';
+import { Item } from '../../item.model';
 
 @Component({
   selector: 'app-streamsolution-default',
@@ -9,6 +11,8 @@ import { StreamSolutionService } from '../streamsolution.service';
   styleUrls: ['./streamsolution-default.component.css'],
 })
 export class StreamSolutionDefaultComponent implements OnInit {
+
+  items: Item[] = [];
 
   itemForm = new FormGroup({
     itemText: new FormControl(''),
@@ -21,6 +25,9 @@ export class StreamSolutionDefaultComponent implements OnInit {
   }
 
   submit() {
-    this.streamSolutionService.addItem(this.itemForm.value.itemText)
+    this.streamSolutionService.addItem(this.itemForm.value.itemText).pipe(
+      switchMap(() => this.streamSolutionService.getItems())
+    )
+    .subscribe((items: Item[]) => this.items = items);
   }
 }
