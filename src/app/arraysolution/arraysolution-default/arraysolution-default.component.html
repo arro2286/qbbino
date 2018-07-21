@@ -1,0 +1,12 @@
+<div class="arraysolution">
+  <h3>Array solution (Default)</h3>
+  <h5>Solution with an array in the service</h5>
+  <form [formGroup]="itemForm" (ngSubmit)="submit()" #form>
+    <input type="text" formControlName="itemText"/>
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let item of arraySolutionService.items">{{ item }}</li>
+  </ul>
+</div>

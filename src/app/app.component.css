@@ -1,3 +1,8 @@
+.arraysolution-container {
+  display: flex;
+  flex-direction: row;
+}
+
 p {
   font-family: Lato;
 }

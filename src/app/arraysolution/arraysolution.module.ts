@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArraySolutionComponent } from './arraysolution.component';
+import { ArraySolutionDefaultComponent } from './arraysolution-default/arraysolution-default.component';
 import { ArraySolutionService } from './arraysolution.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ArraySolutionOnPushComponent } from './arraysolution-on-push/arraysolution-on-push.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule
   ],
-  declarations: [ ArraySolutionComponent ],
+  declarations: [ ArraySolutionDefaultComponent, ArraySolutionOnPushComponent ],
   providers:    [ ArraySolutionService ],
-  exports: [ ArraySolutionComponent ]
+  exports: [ ArraySolutionDefaultComponent, ArraySolutionOnPushComponent ]
 })
 export class ArraysolutionModule { }
