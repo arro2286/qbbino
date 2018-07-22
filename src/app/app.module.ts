@@ -13,6 +13,8 @@ import { MoreStreamsolutionModule } from './morestreamsolution/morestreamsolutio
 import { MoreStreamSolutionContainerComponent } from './morestreamsolution/morestreamsolution-container.component';
 import { StreamCentersolutionModule } from './streamcentersolution/streamcentersolution.module';
 import { StreamCenterSolutionContainerComponent } from './streamcentersolution/streamcentersolution-container.component';
+import { StreamExtremeSolutionContainerComponent } from './streamextremesolution/streamextremesolution-container.component';
+import { StreamExtremesolutionModule } from './streamextremesolution/streamextremesolution.module';
 
 
 const appRoutes: Routes = [
@@ -20,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'streamsolution', component: StreamSolutionContainerComponent },
   { path: 'morestreamsolution', component: MoreStreamSolutionContainerComponent },
   { path: 'streamcentersolution', component: StreamCenterSolutionContainerComponent },
+  { path: 'streamextremesolution', component: StreamExtremeSolutionContainerComponent },
 ];
 
 @NgModule({
@@ -29,6 +32,7 @@ const appRoutes: Routes = [
                   StreamsolutionModule,
                   MoreStreamsolutionModule,
                   StreamCentersolutionModule,
+                  StreamExtremesolutionModule,
                   RouterModule.forRoot(
                     appRoutes) ],
   declarations: [ AppComponent ],

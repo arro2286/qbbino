@@ -1,0 +1,12 @@
+<div class="solution">
+  <h3>Stream extreme solution (Default)</h3>
+  <h5>Solution with all streams combined in the component</h5>
+  <form [formGroup]="itemForm" #form>
+    <input type="text" formControlName="itemText" />
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let item of items$ | async">{{ item }}</li>
+  </ul>
+</div>
