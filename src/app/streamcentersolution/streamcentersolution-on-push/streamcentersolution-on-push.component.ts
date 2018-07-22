@@ -28,6 +28,6 @@ export class StreamCenterSolutionOnPushComponent implements OnInit {
   }
 
   submit() {
-    this.streamCenterSolutionService.addItem(this.itemForm.value.itemText);
+    this.streamCenterSolutionService.addItem(new Item(this.itemForm.value.itemText));
   }
 }

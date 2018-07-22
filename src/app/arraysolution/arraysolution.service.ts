@@ -21,7 +21,6 @@ export class ArraySolutionService {
       switchMap(() => this.itemServer.get()),
       tap(x => console.log("added!", x)),
     ).subscribe((items: Item[]) => this.items = items);
-    console.log('addItem fertig');
   }
 
 }

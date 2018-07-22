@@ -26,10 +26,4 @@ export class StreamCenterSolutionService {
   addItem(item: Item): void {
     return this.actions$$.next(() => this.itemRestService.post(item));
   }
-  // addItem(item: string): Observable<string[]> {
-  //   return  Observable.create((observer: Observer<string[]>) => {
-  //     this.items.push(item);
-  //     observer.next(this.items);
-  //   });
-  // }
 }

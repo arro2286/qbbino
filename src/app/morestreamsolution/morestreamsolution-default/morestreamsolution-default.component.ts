@@ -27,7 +27,7 @@ export class MoreStreamSolutionDefaultComponent implements OnInit {
   }
 
   submit() {
-    this.items$ = this.moreStreamSolutionService.addItem(this.itemForm.value.itemText).pipe(
+    this.items$ = this.moreStreamSolutionService.addItem(new Item(this.itemForm.value.itemText)).pipe(
       switchMap(() => this.moreStreamSolutionService.getItems())
     )
   }

@@ -16,10 +16,4 @@ export class StreamSolutionService {
   addItem(item: Item): Observable<any> {
     return this.itemRestService.post(item);
   }
-  // addItem(item: string): Observable<string[]> {
-  //   return  Observable.create((observer: Observer<string[]>) => {
-  //     this.items.push(item);
-  //     observer.next(this.items);
-  //   });
-  // }
 }

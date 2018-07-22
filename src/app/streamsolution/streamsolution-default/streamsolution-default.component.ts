@@ -25,7 +25,7 @@ export class StreamSolutionDefaultComponent implements OnInit {
   }
 
   submit() {
-    this.streamSolutionService.addItem(this.itemForm.value.itemText).pipe(
+    this.streamSolutionService.addItem(new Item(this.itemForm.value.itemText)).pipe(
       switchMap(() => this.streamSolutionService.getItems())
     )
     .subscribe((items: Item[]) => this.items = items);

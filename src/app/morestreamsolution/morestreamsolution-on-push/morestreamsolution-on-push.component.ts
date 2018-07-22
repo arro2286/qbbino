@@ -28,7 +28,7 @@ export class MoreStreamSolutionOnPushComponent implements OnInit {
   }
 
   submit() {
-    this.moreStreamSolutionService.addItem(this.itemForm.value.itemText)
+    this.moreStreamSolutionService.addItem(new Item(this.itemForm.value.itemText))
       .subscribe(
         () => this.items$ = this.moreStreamSolutionService.getItems()
       );

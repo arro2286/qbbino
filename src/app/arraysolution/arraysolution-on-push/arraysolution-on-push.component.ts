@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@
 
 import { FormGroup, FormControl } from '@angular/forms';
 import { ArraySolutionService } from '../arraysolution.service';
+import { Item } from '../../item.model';
 
 @Component({
   selector: 'app-arraysolution-on-push',
@@ -22,6 +23,6 @@ export class ArraySolutionOnPushComponent implements OnInit {
   }
 
   submit() {
-    this.arraySolutionService.addItem(this.itemForm.value.itemText)
+    this.arraySolutionService.addItem(new Item(this.itemForm.value.itemText))
   }
 }

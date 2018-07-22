@@ -10,17 +10,10 @@ export class MoreStreamSolutionService {
   }
 
   getItems(): Observable<Item[]> {
-    console.log('getItems');
     return this.itemRestService.get();
   }
 
   addItem(item: Item): Observable<any> {
     return this.itemRestService.post(item);
   }
-  // addItem(item: string): Observable<string[]> {
-  //   return  Observable.create((observer: Observer<string[]>) => {
-  //     this.items.push(item);
-  //     observer.next(this.items);
-  //   });
-  // }
 }
