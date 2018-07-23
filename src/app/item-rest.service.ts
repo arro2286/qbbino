@@ -8,7 +8,7 @@ export class ItemRestService {
   get(): Observable<Item[]> {
     return interval(500).pipe(
       take(1),
-      map(() => this.items)
+      map(() => this.items.slice())
     );
 
   }
