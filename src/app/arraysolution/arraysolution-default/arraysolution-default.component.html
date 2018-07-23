@@ -1,12 +1,19 @@
-<div class="solution">
-  <h3>Array solution (Default)</h3>
-  <h5>Solution with an array in the service</h5>
-  <form [formGroup]="itemForm" (ngSubmit)="submit()" #form>
-    <input type="text" formControlName="itemText"/>
-    <button type="submit">Add</button>
-  </form>
-
-  <ul>
-    <li *ngFor="let item of arraySolutionService.items">{{ item.text }}</li>
-  </ul>
+<div class="solution panel panel-default">
+  <div class="panel-heading">
+    <h3>Array solution (Default)</h3>
+    <h5>Solution with an array in the service</h5>
+    <form [formGroup]="itemForm" (ngSubmit)="submit()" #form>
+      <div class="input-group">
+        <input class="form-control" type="text" formControlName="itemText" />
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">Add</button>
+        </span>
+      </div>
+    </form>
+  </div>
+  <div class="panel-body">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of arraySolutionService.items">{{ item.text }}</li>
+    </ul>
+  </div>
 </div>

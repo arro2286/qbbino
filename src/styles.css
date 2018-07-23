@@ -1,8 +1,6 @@
 /* Add application styles & imports to this file! */
 .solution {
-  border: 1px lightslategray solid;
-  margin: 0em 3em;
-  padding: 1em 3em;
+  margin: 1em 3em;
 }
 
 .solution-container {
