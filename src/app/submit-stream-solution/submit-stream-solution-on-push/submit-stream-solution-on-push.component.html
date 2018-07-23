@@ -1,0 +1,13 @@
+<div class="solution">
+    <h3>Submit stream solution (Default)</h3>
+    <h5>Starting with a submit stream listening at the submit event all streames are combined together in the component. No extra
+      service is used except the rest service.</h5>
+  <form [formGroup]="itemForm" #form>
+    <input type="text" formControlName="itemText" />
+    <button class="btn btn-default" type="submit">Add</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let item of items$ | async">{{ item.text }}</li>
+  </ul>
+</div>

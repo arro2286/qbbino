@@ -7,12 +7,12 @@ import { Observable, fromEvent, of } from 'rxjs';
 import { ItemRestService } from '../../item-rest.service';
 
 @Component({
-  selector: 'app-streamextremesolution-on-push',
-  templateUrl: './streamextremesolution-on-push.component.html',
-  styleUrls: ['./streamextremesolution-on-push.component.css'],
+  selector: 'app-submit-stream-solution-on-push',
+  templateUrl: './submit-stream-solution-on-push.component.html',
+  styleUrls: ['./submit-stream-solution-on-push.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StreamExtremeSolutionOnPushComponent implements OnInit {
+export class SubmitStreamSolutionOnPushComponent implements OnInit {
 
   @ViewChild('form') form;
 

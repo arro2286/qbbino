@@ -7,11 +7,11 @@ import { Observable, fromEvent, of } from 'rxjs';
 import { ItemRestService } from '../../item-rest.service';
 
 @Component({
-  selector: 'app-streamextremesolution-default',
-  templateUrl: './streamextremesolution-default.component.html',
-  styleUrls: ['./streamextremesolution-default.component.css'],
+  selector: 'app-submit-stream-solution-default',
+  templateUrl: './submit-stream-solution-default.component.html',
+  styleUrls: ['./submit-stream-solution-default.component.css'],
 })
-export class StreamExtremeSolutionDefaultComponent implements OnInit {
+export class SubmitStreamSolutionDefaultComponent implements OnInit {
 
   @ViewChild('form') form;
 
