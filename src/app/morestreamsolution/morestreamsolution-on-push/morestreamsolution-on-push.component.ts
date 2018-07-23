@@ -16,6 +16,7 @@ export class MoreStreamSolutionOnPushComponent implements OnInit {
 
   items$: Observable<Item[]>;
 
+
   itemForm = new FormGroup({
     itemText: new FormControl(''),
   });
@@ -28,9 +29,8 @@ export class MoreStreamSolutionOnPushComponent implements OnInit {
   }
 
   submit() {
-    this.moreStreamSolutionService.addItem(new Item(this.itemForm.value.itemText))
-      .subscribe(
-        () => this.items$ = this.moreStreamSolutionService.getItems()
-      );
+    this.items$ = this.moreStreamSolutionService.addItem(new Item(this.itemForm.value.itemText)).pipe(
+      switchMap(() => this.moreStreamSolutionService.getItems())
+    )
   }
 }
