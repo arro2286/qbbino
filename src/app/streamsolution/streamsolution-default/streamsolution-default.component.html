@@ -1,5 +1,5 @@
 <div class="solution">
-  <h3>Stream solution (OnPush)</h3>
+  <h3>Stream solution (Default)</h3>
   <h5>Solution with streams in the service</h5>
   <form [formGroup]="itemForm" (ngSubmit)="submit()" #form>
     <input type="text" formControlName="itemText" />
@@ -9,5 +9,4 @@
   <ul>
     <li *ngFor="let item of items">{{ item.text }}</li>
   </ul>
-  <p>Not working correctly!</p>
 </div>
