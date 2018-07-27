@@ -19,7 +19,6 @@ export class ArraySolutionService {
   addItem(item: Item) {
     this.itemServer.post(item).pipe(
       switchMap(() => this.itemServer.get()),
-      tap(x => console.log("added!", x)),
     ).subscribe((items: Item[]) => this.items = items);
   }
 
